@@ -35,6 +35,11 @@ export class AppComponent {
     this.router.navigate(['']);
   }
 
-  search(){}
+  search(){
+    if(this.searchTerm){
+      this.collapse();
+      this.router.navigate(['search', { query: this.searchTerm }]);
+    }
+  }
 
 }
