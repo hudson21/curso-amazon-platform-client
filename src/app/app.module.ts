@@ -25,13 +25,14 @@ import { MyProductsComponent } from './my-products/my-products.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
 import { SearchComponent } from './search/search.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
 
 @NgModule({
   declarations: [ //Components that are in our app
-    AppComponent, HomeComponent, MessageComponent, RegistrationComponent, LoginComponent, ProfileComponent, SettingsComponent, AddressComponent, CategoriesComponent, PostProductComponent, MyProductsComponent, CategoryComponent, ProductComponent, SearchComponent
+    AppComponent, HomeComponent, MessageComponent, RegistrationComponent, LoginComponent, ProfileComponent, SettingsComponent, AddressComponent, CategoriesComponent, PostProductComponent, MyProductsComponent, CategoryComponent, ProductComponent, SearchComponent, CartComponent
   ],
   imports: [ //List of dependencies that are inside of our app
     BrowserModule,
