@@ -1,0 +1,92 @@
++ npm install nodemon -g
++ cd dentro de la carpeta server (Creamos con mkdir dentro del proyecto)
++ npm init 
++ npm install express body-parser morgan mongoose --save
+
+++++++++++++++(Para configurar el comando de npm en windows 10)*******************
+
++Propiedades del equipo/ Configuración avanzada del sistema/ Variables de Entorno/ Path
+
++server/ nodemon server
+
+**************************(Establecer mongoDB sin tenerlo que instalar)*******************************
++ https://mlab.com---->Creas tu cuenta---->Click en crear nuevo--->Amazon(Web Services) y Sandbox
+
++ To connect using a driver via the standard MongoDB URI (what's this?):
+mongodb://<dbuser>:<dbpassword>@ds217671.mlab.com:17671/amazonwebapplication
+
++ To connect using the mongo shell:
+mongo ds217671.mlab.com:17671/amazonwebapplication -u <dbuser> -p <dbpassword>
+
++ CORS: Cross Origin Resource Sharing (Communications between different domains)
+
++ Dentro de la carpeta del proyecto/npm install cors --save
+
+****************************(Instalar dependencias en el lado del Frontend)*******************************
++ Crear dentro del proyecto una carpeta llamada client (para Angular)
++ npm install -g @angular/cli
++ ng new AngularAmazon --routing --style=scss
++ dentro de AngularAmazon/npm install @ng-bootstrap/ng-bootstrap
++ Todos los links estan dentro de src/index.html
++ ng generate component Home
++ ng generate service RestApi
++ ng generate service Data
++ ng generate component Message
++ Dentro de la carpeta de server/npm install bcrypt-nodejs crypto jsonwebtoken --save
++ Dentro de la carpeta de client/Amazon/ng generate component Registration
++ ng generate component Login
++ ng generate service AuthGuard
+
++ El AuthGuardService es el middleware que se puede utilizar en las rutas de Angular
++ ng generate component Profile
++ ng generate component Settings
++ ng generate component Address
+
+********************************(Amazon Web Services  seller.js)***********************
++ Dentro de la cuenta en services/S3
+
+AKIAJZ5YUVKTMPGSL7JQ : accesskey
+UwZ/DUb1PNMRnrys8B95ng1210eo+UpM13CiG9Jy : Secret Key
+
+Server/npm install aws-sdk multer multer-s3 --save
+
+*******************************(Faker Library)*******************************************
+server/npm install faker --save
+*********************************(Categories Angular)************************************
+ng generate component Categories
+ng generate component PostProduct
+ng generate component MyProducts
+ng generate component Category
+ng generate component Product
+server/npm install async --save
+
+**********************************(Deep Populate)***************************************
+server/npm install mongoose-deep-populate --save
+
+***********************************(Search Api with Algolia)***************************
+algolia.com --> Dashboard --> Indices --> 
+
+Application ID: SN9PPA0IWK
+Search-Only API Key: e66c2173647c8db7eb3287529ecec248
+Admin API Key: e75c06718117efd92d36475ee3c4e2f3
+
+server/npm install mongoose-algolia --save
+server/npm install algoliasearch --save
+
+ng generate component Search
+
+El activatedRoute es para recoger los parámetros por la URL
+
+*************************************(Create a Stripe Account)********************************
+https://stripe.com --> payments -->
+
+typings.d.ts
+environments/environment.prod.ts  and environment.ts 
+
+server/npm install stripe --save
+-----------------------STRIPE----------------------
+Secret Key: sk_test_1fx65b2F61WfeEzXZ9xUqEll       |
+Publishable Key: pk_test_RxMVQ7Drdp0C0tQURhiMvVvD  |
+---------------------------------------------------
+
+ng generate component Cart
